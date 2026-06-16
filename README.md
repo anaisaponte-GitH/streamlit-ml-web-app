@@ -4,6 +4,18 @@ Machine Learning web application built with Streamlit and deployed on Render to 
 
 ---
 
+## Live Demo
+
+Try the deployed application here:
+
+https://streamlit-ml-web-app.onrender.com
+
+## Application Preview
+
+![Medical Insurance Cost Predictor](preview.png)
+
+---
+
 ## Overview
 
 This project transforms a Machine Learning regression model into an interactive web application that allows users to estimate medical insurance charges based on demographic and lifestyle factors.
