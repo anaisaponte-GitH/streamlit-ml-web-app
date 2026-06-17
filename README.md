@@ -1,108 +1,36 @@
-# 💰 Medical Insurance Cost Predictor
+# Medical Insurance Cost Predictor
 
-Machine Learning web application built with Streamlit and deployed on Render to estimate medical insurance costs based on customer information.
+Interactive Machine Learning web application built with Streamlit and deployed on Render.
 
----
-
-## 🚀 Live Demo
-
-Try the deployed application here:
-
-🔗 https://streamlit-ml-web-app.onrender.com
+The application allows users to estimate medical insurance costs by entering basic demographic and lifestyle information.
 
 ---
 
-## 📸 Application Preview
+## Live Application
+
+https://streamlit-ml-web-app.onrender.com
+
+---
+
+## Application Preview
 
 ![Medical Insurance Cost Predictor](preview.png)
 
 ---
 
-## 🎯 Business Problem
+## Project Overview
 
-Medical insurance costs are influenced by multiple demographic and lifestyle factors such as age, body mass index (BMI), smoking habits, family size, and geographic region.
+This project demonstrates how a trained Machine Learning model can be transformed into a user-facing web application.
 
-The objective of this project is to provide an estimation tool that predicts insurance charges using historical customer data and Machine Learning techniques.
+The application loads a previously trained Linear Regression model and allows users to generate insurance cost predictions through an interactive interface.
 
-Potential use cases include:
-
-- Insurance cost estimation.
-- Risk assessment support.
-- Educational demonstration of regression models.
-- Machine Learning model deployment practice.
+The focus of this repository is the deployment and usability layer of the Machine Learning solution.
 
 ---
 
-## 📊 Dataset
+## Application Features
 
-The project uses the **Medical Insurance Cost Dataset**, which contains demographic and health-related information for insurance customers.
-
-### Features
-
-- Age
-- Sex
-- BMI (Body Mass Index)
-- Number of children
-- Smoking status
-- Region
-
-### Target Variable
-
-- **Charges** → Medical insurance cost.
-
----
-
-## 🧠 Solution Approach
-
-### Exploratory Data Analysis (EDA)
-
-The dataset was explored to identify:
-
-- Feature distributions.
-- Relationships between variables.
-- Correlations with insurance costs.
-- Potential outliers.
-
-### Data Preparation
-
-The preprocessing workflow included:
-
-- Handling categorical variables.
-- Feature encoding.
-- Train/Test split.
-- Data validation.
-
-### Model Training
-
-Several regression algorithms were evaluated during experimentation.
-
-The final deployed solution uses a **Linear Regression** model trained on the Medical Insurance dataset.
-
-### Model Deployment
-
-The trained model was serialized as a `.sav` file and integrated into a Streamlit web application.
-
-Users can enter their information through a friendly interface and instantly obtain an estimated insurance cost.
-
----
-
-## 📈 Model Performance
-
-The deployed model was evaluated using standard regression metrics.
-
-**Model:** Linear Regression
-
-- R² Score: *(add your value here)*
-- MAE (Mean Absolute Error): *(add your value here)*
-- RMSE (Root Mean Squared Error): *(add your value here)*
-
-> These metrics measure how accurately the model predicts insurance charges based on customer information.
-
----
-
-## 💻 Application Features
-
-The application allows users to provide:
+Users can enter the following information:
 
 - Age
 - Sex
@@ -111,23 +39,32 @@ The application allows users to provide:
 - Smoking status
 - Region
 
-After submitting the information, the model generates an estimated insurance cost in real time.
+The application processes these inputs, applies the same feature structure used during model training, and returns an estimated medical insurance cost.
 
 ---
 
-## 🛠️ Technologies Used
+## How It Works
+
+1. The trained Linear Regression model is loaded from a `.sav` file.
+2. User inputs are collected through Streamlit widgets.
+3. Categorical variables are converted into the encoded format expected by the model.
+4. The input data is passed to the model.
+5. The estimated insurance cost is displayed to the user.
+
+---
+
+## Technologies Used
 
 - Python
+- Streamlit
 - Pandas
-- NumPy
 - Scikit-Learn
 - Joblib
-- Streamlit
 - Render
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 streamlit-ml-web-app/
@@ -135,11 +72,6 @@ streamlit-ml-web-app/
 ├── README.md
 ├── requirements.txt
 ├── preview.png
-│
-├── data/
-│   ├── raw/
-│   ├── interim/
-│   └── processed/
 │
 ├── models/
 │   └── linear_regression_medical_insurance_default.sav
@@ -152,25 +84,37 @@ streamlit-ml-web-app/
 
 ---
 
-## 🎓 Key Learnings
+## Related Project
 
-This project demonstrates:
+This application is based on a regression model developed in the Medical Insurance Cost Prediction project.
 
-- End-to-end Machine Learning workflow.
-- Regression model development.
-- Feature engineering and preprocessing.
-- Model serialization using Joblib.
-- Building user-facing applications with Streamlit.
-- Deploying Machine Learning solutions to production environments.
+The original Machine Learning analysis includes:
+
+- Exploratory Data Analysis
+- Model training
+- Model comparison
+- Model selection
+- Model export for deployment
 
 ---
 
-## 👩‍💻 Author
+## Key Learnings
 
-**Anais Aponte**
+- Building interactive Machine Learning applications.
+- Loading serialized models with Joblib.
+- Creating user input forms with Streamlit.
+- Preparing user inputs for model inference.
+- Deploying a Machine Learning web application with Render.
+- Turning a trained model into a usable product.
+
+---
+
+## Author
+
+**Anaís Aponte**
 
 Senior Product Owner | Agile Delivery | Data & AI
 
-🔗 GitHub: https://github.com/anaisaponte-GitH
+GitHub: https://github.com/anaisaponte-GitH
 
-🔗 LinkedIn: https://linkedin.com/in/anaisaponte
+LinkedIn: https://linkedin.com/in/anaisaponte
